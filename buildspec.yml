@@ -2,7 +2,7 @@ version: 0.2
 env:
   secrets-manager:
     DOCKERHUB_USER: arn:aws:secretsmanager:ap-northeast-1:235167363937:secret:docker_auth-ObCFIJ:docker_hub_username
-    DOCKERHUB_PASSWORD: arn:aws:secretsmanager:ap-northeast-1:235167363937:secret:docker_auth-ObCFIJ:docker_hub_password
+    DOCKERHUB_PASS: arn:aws:secretsmanager:ap-northeast-1:235167363937:secret:docker_auth-ObCFIJ:docker_hub_password
 
 phases:
   pre_build:
