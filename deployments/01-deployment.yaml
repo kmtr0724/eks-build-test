@@ -28,7 +28,6 @@ spec:
       containers:
       - name: testapp
         image: __ECR_URL__:__IMAGE_TAG__
-        #image: 235167363937.dkr.ecr.ap-northeast-1.amazonaws.com/ecr-test-repo:898c53858cc7460748201ad5a23528d4623a8d63
         ports:
         - name: http
           containerPort: 80
