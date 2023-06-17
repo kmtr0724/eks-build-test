@@ -24,4 +24,4 @@ phases:
     # rollout kubernetes(eks) deployment
       - echo "rollout eks deployment"
       - aws eks update-kubeconfig --name my-cluster2 --region ap-northeast-1 --verbose
-      - kubectl rollout restart deployments/01-deployment.yaml -n eks-sample-app
+      - kubectl apply -f deployments/
