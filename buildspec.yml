@@ -35,7 +35,7 @@ phases:
       - export ECR_URL=$AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME
       - echo ECR_URL=$ECR_URL
       - aws eks update-kubeconfig --name my-cluster2 --region ap-northeast-1 --verbose
-      - sed -i -e "|__IMAGE_TAG__|${IMAGE_TAG}|" ./deployments/01-deployment.yaml
-      - sed -i -e "|__ECR_URL__|${ECR_URL}|" ./deployments/01-deployment.yaml
+      - sed -i -e "s|__IMAGE_TAG__|${IMAGE_TAG}|" ./deployments/01-deployment.yaml
+      - sed -i -e "s|__ECR_URL__|${ECR_URL}|" ./deployments/01-deployment.yaml
       - cat ./deployments/01-deployment.yaml
       - kubectl apply -f deployments/
